@@ -1,0 +1,44 @@
+body{
+    background-color: #4d81f1;
+}
+.outerdiv{
+    padding: 10px;
+    border: 1px solid;
+    color: #19202e;
+    background-color: #5f6879;
+    margin: 1.5rem;
+    
+}
+#foo{
+    margin: 1.5rem;
+}
+body{
+    padding-top: 15px;
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 0 15px;
+    padding-bottom: 20px;
+    max-height: 800px;
+
+}
+#btn_sp{
+    background-color: #ebd4d4;
+    color: #192019;
+    border: #3d6e22;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 98%;
+    height: 2rem;
+
+}
+#btn_signup{
+    background-color: #ebd4d4;
+    color: #192019;
+    border: #3d6e22;
+    font-weight: bold;
+    margin-top: 1rem;
+    width: 100%;
+    border-radius: 0.5rem;
+    height: 2rem;
+
+}

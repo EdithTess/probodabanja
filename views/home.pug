@@ -1,0 +1,51 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Admin/Home Page
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="admin.css")
+
+  body
+    .navbar
+      a(href="/home") Home
+      .dropdown
+        button.dropbtn
+          | View Details
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerlists" target="") Customer
+          a(href="./saleslist" target="") Sales Executive
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerreg" target="_blank") Customer
+          a(href="./login" target="_blank") Sales Executive
+    .outerdiv
+          .row
+            .col
+              .row
+                .col-md-6
+                  h1(style="color:#4d81f1;")
+                  | BBB, is a private company that offers bodabodas,tuktuks,tricycles among others on credit to qualified Ugandans.
+                .col-md-6 
+                  img.d-block.w-100(src="Images/bb-bbb.JPG", alt="") 
+            .col 
+            #carouselExampleSlidesOnly.carousel.slide(data-ride="carousel")
+                carousel-inner
+                    .carousel-item.active
+                      img.d-block.w-100(src="Images/honda.jpg" alt= width="1100" height="500")
+                    .carousel-item
+                      img.d-block.w-100(src="Images/unnamed.jpg" alt=width="1100" height="500")
+                    .carousel-item
+                      img.d-block.w-100(src="Images/bodaum.jpg" alt=width="1100" height="500")
+
+
+     
+    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
+    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
+    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")               
+    span#foo(style="font-size: small; float: right; ") EdithNdagire &copy2020

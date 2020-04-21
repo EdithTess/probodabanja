@@ -1,0 +1,285 @@
+
+
+/* Navbar container */
+.navbar {
+  overflow: hidden;
+  background-color: #4d81f1;
+  font-family: Arial;
+}
+
+/* Links inside the navbar */
+.navbar a {
+  float: left;
+  font-size: 16px;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+/* The dropdown container */
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+/* Dropdown button */
+.dropdown .dropbtn {
+  font-size: 16px;
+  border: none;
+  outline: none;
+  color: white;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit; /* Important for vertical align on mobile phones */
+  margin: 0; /* Important for vertical align on mobile phones */
+}
+
+/* Add a red background color to navbar links on hover */
+.navbar a:hover, .dropdown:hover .dropbtn {
+  background-color: red;
+}
+
+/* Dropdown content (hidden by default) */
+.dropdown-content {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
+  z-index: 1;
+}
+
+/* Links inside the dropdown */
+.dropdown-content a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+/* Add a grey background color to dropdown links on hover */
+.dropdown-content a:hover {
+  background-color: #ddd;
+}
+
+/* Show the dropdown menu on hover */
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.active{
+  /* padding: 14px 16px; */
+  height: 40px;
+}  
+  
+  /* .navbar{
+    
+      background-color: #3b5998;
+      border-bottom: #133783;
+      height: 75px;
+      padding-bottom: 8px;
+  
+  }
+   */
+  body {
+    font-size: 14px;
+    color: #4d81f1;
+    font-weight: 500;
+    font-family: 'Poppins';
+    margin: 0px;
+    background: #282828;
+  }
+  .signup-content, .form-row, .label-flex, .form-radio-group {
+    display: flex;
+   }
+  
+  .container {
+    width: 1400px;
+    margin: 0px;
+    background: #fff;
+  }
+  
+  .register-form {
+      padding: 93px 115px 90px 80px;
+      margin-bottom: 5px; }
+  .form-row .form-group {
+        width: 50%;
+        padding: 0px 30px;
+     }
+    label, input {
+      display: block;
+      width: 100%; 
+    }
+    
+    label {
+      font-weight: bold;
+      text-transform: uppercase;
+      margin-bottom: 7px; 
+    }
+    
+    label.required {
+      position: relative; 
+    }
+    label.required:after {
+        content: '*';
+        margin-left: 2px;
+        color: #b90000; 
+      }
+    
+    input {
+      box-sizing: border-box;
+      border: 1px solid #ebebeb;
+      padding: 14px 20px;
+      border-radius: 5px;
+      font-size: 14px;
+      font-family: 'Poppins'; 
+    }
+   
+    .label-flex {
+      justify-content: space-between;
+    }
+  
+    .form-radio {
+      margin-bottom: 18px; 
+    }
+    .form-radio input {
+        width: auto;
+        display: inline-block; 
+    }
+    
+    .form-radio-group {
+      padding-bottom: 10px;
+      padding-top: 12px; 
+    }
+    
+    .form-radio-item {
+      position: relative;
+      margin-right: 30px; 
+    }
+    .form-radio-item label {
+        font-weight: 500;
+        padding-left: 30px;
+        position: relative;
+        z-index: 9;
+        display: block;
+        cursor: pointer;
+        text-transform: none; 
+    }
+    
+    .check {
+      display: inline-block;
+      position: absolute;
+      border: 1px solid #ebebeb;
+      border-radius: 50%;
+      height: 18px;
+      width: 18px;
+      top: 2px;
+      left: 0px;
+    }
+      
+    .check:before {
+        position: absolute;
+        display: block;
+        content: '';
+        width: 12px;
+        height: 12px;
+        border-radius: 50%;
+        top: 3px;
+        left: 3px;
+        margin: auto;
+    }
+    
+    input[type=radio] {
+      position: absolute;
+      visibility: hidden; 
+    }
+    
+    input[type=radio]:checked ~ .check {
+        border: 1px solid #329e5e; 
+    }
+    
+    input[type=radio]:checked ~ .check::before {
+        background: #329e5e;
+    }
+    
+    .form-submit {
+      text-align: right; }
+    
+    .submit {
+      width: 150px;
+      height: 50px;
+      display: inline-block;
+      font-family: 'Poppins';
+      font-weight: bold;
+      font-size: 14px;
+      padding: 10px;
+      border: none;
+      cursor: pointer;
+      text-transform: uppercase;
+      border-radius: 5px;
+    }
+    
+    #cancel {
+      background: #fff;
+      color: #999;
+      border: 2px solid #ebebeb; }
+    
+    #cancel:hover {
+        border: 2px solid #329e5e;
+        background: #329e5e;
+        color: #fff; }
+    
+    #submit {
+      background: #329e5e;
+      color: #fff;
+      margin-right: 25px; 
+    }
+    #submit:hover {
+        background-color: #267747; 
+    }
+    
+    .form-input {
+      position: relative; }
+    
+    label.error {
+      display: block;
+      position: absolute;
+      top: 0px;
+      right: 0; 
+    }
+    label.error:after {
+        font-family: 'Material-Design-Iconic-Font';
+        position: absolute;
+        content: '\f1f8';
+        right: 20px;
+        top: 37px;
+        font-size: 23px;
+        color: #c70000;
+    }
+    
+    input.error {
+      border: 1px solid #c70000; }
+    
+    .select-list {
+      position: relative;
+      display: inline-block;
+      width: 100%;
+      margin-bottom: 47px; }
+    
+    .list-item {
+      position: absolute;
+      width: 100%;
+      z-index: 99; }
+    
+    .photo{
+      border: #329e5e solid;
+    width: 235px;
+    height: 155px;
+    }  
+    
+  .clear {
+    clear: both; }
+  
+   

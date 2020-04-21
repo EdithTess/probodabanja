@@ -1,0 +1,44 @@
+html
+    head    
+        title List of users
+    body
+        div.form-row
+            div.col.form-group.col-md-6    
+                form.search(action='/saleslist')
+                    div.form-row
+                        div.col-md-8
+                            input.form-control(name='username' placeholder="Enter your search term ...")
+                        div.col-md-4
+                            input.btn.btn-dark.btn-block(type="submit")
+            div.col.form-group.col-md-6
+                form(method="post" action='/logout')
+                    button.btn.btn-dark.btn-block(type="submit") Log out
+        form(method="post" action='/register/delete')
+        table
+            thead(style="background-color: teal;")
+                tr  
+                    th(style="padding-right: 80px; color: white") First name
+                    th(style="padding-right: 80px; color: white") Last name
+                    th(style="padding-right: 80px; color: white") Username
+                    th(style="padding-right: 50px; color: white") Sales Person ID
+                    th(style="padding-right: 80px; color: white") Phone number
+                    th(style="padding-right: 80px; color: white") Company Role
+                    th(style="padding-right: 80px; color: white") Working Days
+
+            tbody
+             each user in users
+                    tr
+                        td(style="padding-right: 80px;")  #{user.first_name}
+                        td(style="padding-right: 80px;")  #{user.last_name}
+                        td(style="padding-right: 80px;")  #{user.username}
+                        td(style="padding-right: 80px;")  #{user.spid}
+                        td(style="padding-right: 80px;")  #{user.phonenumber}
+                        td(style="padding-right: 80px;")  #{user.companyrole}
+                        td(style="padding-right: 80px;")  #{user.wdays}
+                        td(style="padding-right: 80px;") 
+                                input(type="hidden", placeholder="", name="username", value=user.username)
+                                button.btn.btn-dark.btn-block(type="submit") Delete
+
+
+
+

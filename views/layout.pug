@@ -1,0 +1,30 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Admin/Home Page
+    link(rel="stylesheet" href="bootstrap/css/bootstrap.min.css")
+    
+    //- link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="admin.css")
+
+  body
+    .navbar
+      a(href="/home") Home
+      .dropdown
+        button.dropbtn
+          | View Details
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerlists" target="_blank") Customer
+          a(href="./saleslist" target="_blank") Sales Executive
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerreg" target="_blank") Customer
+          a(href="./login" target="_blank") Sales Executive
+
+        block banja  

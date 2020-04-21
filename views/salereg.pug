@@ -1,0 +1,82 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Sales registration form
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="salesreg.css")
+  body(onload="document.salesr.first_name.focus();")
+    .navbar
+      a(href="/home") Home
+      .dropdown
+        button.dropbtn
+          | View Details
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerlists" target="") Customer
+          a(href="./saleslist" target="") Sales Executive
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerreg" target="_blank") Customer
+          a(href="./login" target="_blank") Sales Executive
+    h1(style="color:#4d81f1;")
+      center  SALES PERSON REGISTRATION FORM 2020
+    .container
+      .row
+        .col-md-12
+          .signup-content
+            .signup-form
+              form(method="POST" name="salesr" action="/register" onsubmit="validate();")
+                .form-row
+                  .form-group
+                    .form-input
+                      label.required(for="first_name") First name
+                      input#first_name(type="text" name="first_name")
+                    .form-input
+                      label.required(for="last_name") Last name
+                      input#last_name(type="text" name="last_name")
+                    .form-input
+                      label.required(for="username") Username
+                      input#username(type="text" name="username")
+                    .form-input
+                      label.required(for="password") Password
+                      input#password(type="password" name="password")
+                    .form-input
+                      label(for="email") Email
+                      input#email(type="email" name="email")
+                    br
+                    .form-input
+                      label.required(for="dob") Date of birth
+                      input#dob(type="date" name="dob")
+                  .form-group
+                    .form-input
+                      label.required(for="spid") Sales Person ID
+                      input#spid(type="text" name="spid")
+                    br 
+                    .form-input
+                      label.required(for="phonenumber") Phone number
+                      input#phonenumber(type="text" name="phonenumber")
+                    br
+                    .form-input
+                      label.required(for="wdays") working days
+                      input#wdays(type="text" name="wdays")
+                    br
+                    .form-input
+                      label.required(for="current") Current Date
+                      input#current(type="date" name="current")
+                    br
+                    label.required(for="companyrole") Company Role
+                    .select-list
+                      select(name="companyrole")
+                        option#rsupervisor(value="supervisor") Supervisor
+                        option#rnone(value="none") None
+                hr
+                .form-submit
+                  input#submit.submit(type="submit" value="Submit" name="submit" onclick="validate()")
+                  input#cancel.submit(type="reset" value="Cancel" name="reset" onclick="reset();")
+    script(src="/salesreg.js")
+    span#foo(style="font-size: small; float: right; ") EdithNdagire &copy2020

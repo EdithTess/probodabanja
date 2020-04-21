@@ -1,0 +1,45 @@
+html
+    head    
+        title List of customers
+    body
+       div.form-row
+            div.col.form-group.col-md-9    
+                form.search(action='/customerlists')
+                    div.form-row
+                        div.col-md-8
+                            input.form-control(name='first_name' placeholder="Enter your search term ...")
+                        div.col-md-4
+                            input.btn.btn-dark.btn-block(type="submit")
+            div.col.form-group.col-md-3
+                form(method="post" action='/logout')
+                    button.btn.btn-dark.btn-block(type="submit") Log out         
+            header.card-header
+                h4.card-title Customers' Details
+
+
+            table
+                thead(style="background-color: teal;")
+                    tr
+                        th(style="color: white") Customer ID
+                        th(style="padding-left: 80px; color: white")  First Name
+                        th(style="padding-left: 80px; color: white")  Last Name
+                        th(style="padding-left: 80px; color: white")  Email
+                        th(style="padding-left: 80px; color: white")  National ID
+                        th(style="padding-left: 80px; color: white")  Down Payment
+                        th(style="padding-left: 80px; color: white")  Balance b/f
+                 
+                        
+                tbody
+                 each customer in customers
+                        tr
+                            td(style="padding-left: 80px;")   #{customer.customerid}
+                            td(style="padding-left: 80px;")   #{customer.first_name}
+                            td(style="padding-left: 80px;")   #{customer.last_name}
+                            td(style="padding-left: 80px;")   #{customer.email}
+                            td(style="padding-left: 80px;")   #{customer.nin}
+                            td(style="padding-left: 80px;")   #{customer.downpayment}
+                            td(style="padding-left: 80px;")   #{customer.balancebf}
+
+
+
+                            

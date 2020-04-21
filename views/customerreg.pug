@@ -1,0 +1,160 @@
+doctype html
+html
+  head
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    title Customer registration form
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
+    link(rel="stylesheet" href="customerdet.css")
+  body(onload="document.customerreg.customerid.focus();")
+    .navbar
+      a(href="/home") Home
+      .dropdown
+        button.dropbtn
+          | View Details
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerlists" target="") Customer
+          a(href="./saleslist" target="") Sales Executive
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerreg" target="_blank") Customer
+          a(href="./login" target="_blank") Sales Executive
+    h1(style="color:#4d81f1;")
+      center  CUSTOMER REGISTRATION FORM 2020
+    .container
+      .row
+        .col-md-12
+          .signup-content
+            .signup-form
+              form(method="POST" name="customerreg" action="/customerreg" onsubmit="validate();")
+                .form-row
+                  .form-group
+                    br
+                    .form-input
+                      label.required(for="customerid") Customer ID
+                      input#customerid(type="text" name="customerid")
+                    .form-input
+                      label.required(for="first_name") First name
+                      input#first_name(type="text" name="first_name")
+                    .form-input
+                      label.required(for="last_name") Last name
+                      input#last_name(type="text" name="last_name")
+                    .form-input
+                      label.required(for="email") Email
+                      input#email(type="text" name="email")
+                  .form-group
+                    br
+                    .form-input
+                      label.required(for="currentdate") Current Date
+                      input#currentdate(type="date" name="currentdate")
+                    .form-input
+                      label.required(for="phone_number") Phone number
+                      input#phone_number(type="text" name="phone_number")
+                    .form-input
+                      label.required(for="nin") National ID
+                      input#nin(type="text" name="nin")
+                    .form-input
+                      label.required(for="nationality") Nationality
+                      input#nationality(type="text" name="nationality")
+                  .form-group
+                    br
+                    .form-input
+                      label.required(for="cusdob") Date of birth
+                      input#cusdob(type="date" name="cusdob" value="")
+                    br
+                    .form-radio
+                      .label-flex
+                        label(for="status") Marital status
+                      .form-radio-group
+                        .form-radio-item
+                          input#single(type="radio" name="status" value="single")
+                          label(for="single") Single
+                          span.check
+                        .form-radio-item
+                          input#married(type="radio" name="status" value="married")
+                          label(for="married") Married
+                          span.check
+                    .form-input
+                      label.required(for="division") Division/District
+                      input#division(type="text" name="division")
+                    .form-radio-group
+                      label.required(for="permit") Permit
+                      .form-radio-item
+                        input#yes(type="radio" name="permit" value="yes")
+                        label(for="yes") Yes
+                        span.check
+                      .form-radio-item
+                        input#no(type="radio" name="permit" value="no")
+                        label(for="no") No
+                        span.check
+                hr
+                .form-row
+                  .form-group
+                    label.required(for="vehicle") Kind of Vehicle
+                    .select-list
+                      select#vehicle(name="vehicle")
+                        option(value="") Boda Boda
+                        option(value="") Tuk Tuk
+                        option(value="") Tricycle
+                    label.required(for="make") Type/Make
+                    input#make(type="text" name="make")
+                    br
+                    label.required(for="numberplate") Number Plate
+                    input#numberplate(type="text" name="numberplate")
+                    .form-input
+                      label.required(for="stagename") Stage name
+                      input#stagename(type="text" name="stagename")
+                      br
+                      label.required(for="stagejoin") Stage Join Date
+                      input#stagejoin(type="date" name="stagejoin")
+                      br
+                      label.required(for="stagechair") Stage Chairman
+                      input#stagechair(type="text" name="stagechair")
+                  .form-group
+                    label.required(for="downpayment") Down Payment
+                    .select-list
+                      select#downpayment(name="downpayment")
+                        option(value="") 850000
+                        option(value="") 950000
+                        option(value="") 850000
+                    label.required(for="balancebf") Balance b/f
+                    input#stagechair(type="number" name="balancebf")
+                    fieldset
+                      label(style="text-transform: none;") LC1
+                      legend
+                        label.required LC Stamps
+                      div(style="border-color: #329e5e;")
+                        input#lc1(type="file" name="lc1" value="")
+                      legend LC3
+                      div(style="border-color: #329e5e; ")
+                        input#lc3(type="file" name="lc3" value="")
+                    fieldset
+                      label(style="text-transform: none;") Attachments
+                      legend
+                        label.required Required Documents
+                      div(style="border-color: #329e5e;")
+                        input#reqdoc(type="file" name="reqdoc" value="")
+                        br
+                hr
+                h2(style="color:#4d81f1;") REFEREE SECTION 
+                .form-input
+                  label.required(for="name") Name
+                  input#name(type="text" name="name" value="")
+                .form-input
+                  label.required(for="phonenumber") Phone number
+                  input#phonenumber(type="text" name="phonenumber" value="")
+                .form-input
+                  label.required(for="occupation") Occupation
+                  input#occupation(type="text" name="occupation" value="")
+                .form-input
+                  label.required(for="dob") Date of birth
+                  input#dob(type="date" name="dob" value="")
+                br
+                .form-submit
+                  input#submit.submit(type="submit" value="Submit" name="submit" onclick="validate()")
+                  input#cancel.submit(type="reset" value="Cancel" name="reset" onclick="reset();")
+    script(src="/customerdet.js")
