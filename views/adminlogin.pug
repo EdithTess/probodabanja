@@ -7,18 +7,33 @@ html(lang="en")
     link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
     link(rel="stylesheet" href="login.css")
   body
-    header
+    .navbar
+      a(href="/home") Home
+      .dropdown
+        button.dropbtn
+          | View Details
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerlists" target="_blank") Customer
+          a(href="./saleslist" target="_blank") Sales Executive
+      .dropdown
+        button.dropbtn
+          | Register
+          i.fa.fa-caret-down
+        .dropdown-content
+          a(href="./customerreg" target="_blank") Customer
+          a(href="./login" target="_blank") Sales Executive
     .outerdiv
       h2 Admin Login
         form(method="POST" action="/login")
           | Username:
           br
-          input#btn_sp(type="text" name="username" value="" placeholder="username")
+          input#btn_sp(type="text" required name="username" value="" placeholder="username")
           br
           br
           | Password:
           br
-          input#btn_sp(type="password" name="password" value="" placeholder="password")
+          input#btn_sp(type="password" required name="password" value="" placeholder="password")
 
           button#btn_signup.button2 LOG IN
           br
