@@ -1,0 +1,18 @@
+
+
+.image{
+    width: 100%;
+}
+
+
+
+.pd{
+    color: #e00130;
+}
+
+a:hover{
+    color: #e00130 !important;
+}
+a:active{
+    color: #e00130 !important;
+}

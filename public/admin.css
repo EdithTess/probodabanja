@@ -70,6 +70,7 @@
   display: block;
 }
 
+
 body {
   font-size: 14px;
   color: #4d81f1;
@@ -86,7 +87,7 @@ body {
 }
 
 .row{
-    width: 700px;
+    /* width: 700px; */
     margin: 1rem;
     height: auto;
 }

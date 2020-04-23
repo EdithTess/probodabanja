@@ -1,0 +1,30 @@
+
+.parent{
+    margin: 50px 100px;
+    text-align: center;
+    padding: 10px;    
+    box-shadow: 5px 5px 5px #e00130;
+    max-width: 1000px;
+}
+
+
+
+.mode {
+    
+    border: solid gray;
+    margin: 50px;
+    padding: 10px;
+    
+   
+}
+
+
+.row{
+   margin: 20px;
+   justify-content: center;
+}
+
+fieldset a{
+    color: white;
+}
+   
