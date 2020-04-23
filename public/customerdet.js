@@ -1,6 +1,5 @@
 //Defining function with a name validate
-function validate() {
-    console.log("run validator")
+function validate() {  
   //Accessing form elements via form attribute
   var ucustomerid = document.customerreg.customerid;
   var ufnameid = document.customerreg.first_name;

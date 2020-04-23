@@ -33,6 +33,7 @@ html
               form(method="POST" name="salesr" action="/register" onsubmit="validate();")
                 .form-row
                   .form-group
+                    br
                     .form-input
                       label.required(for="first_name") First name
                       input#first_name(type="text" name="first_name")
@@ -53,6 +54,7 @@ html
                       label.required(for="dob") Date of birth
                       input#dob(type="date" name="dob")
                   .form-group
+                    br
                     .form-input
                       label.required(for="spid") Sales Person ID
                       input#spid(type="text" name="spid")
@@ -79,4 +81,4 @@ html
                   input#submit.submit(type="submit" value="Submit" name="submit" onclick="validate()")
                   input#cancel.submit(type="reset" value="Cancel" name="reset" onclick="reset();")
     script(src="/salesreg.js")
-    span#foo(style="font-size: small; float: right; ") EdithNdagire &copy2020
+    span#foo(style="font-size: large; float: right; ") bodaboda banja &copy2020

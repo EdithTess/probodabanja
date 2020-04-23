@@ -18,8 +18,8 @@ router.post("/", async (req, res) => {
           res.redirect("/customerlists");
           
     } catch (error) {
-      console.log("error message")
-      // console.log (error)
+      // console.log("error message")
+      console.log (error)
       res.status(400).send("unable to save to database");
     }
   });

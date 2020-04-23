@@ -76,29 +76,21 @@ body {
   font-weight: 500;
   font-family: 'Poppins';
   margin: 0px;
-  background: #282828;
+  background: #dfdfe0;
 }
 
 .outerdiv{
-    /* border-color: green; */
-    /* background-color: greenyellow; */
-    width: auto;
-    height: auto;
-    margin: 5px;
+    margin: 0px auto;
+    max-width: 900px;
+    padding: 0 15px;
 }
 
 .row{
-    /* background-color: teal; */
-    width: auto;
-    margin: 5px;
+    width: 700px;
+    margin: 1rem;
     height: auto;
 }
 .col{
-    padding: 10px 5px;
-    margin: 5px;
-    width: 500px;
-    /* border: 1px solid; */
+    margin: 1rem;
     color: #4d81f1;
-    /* background-color: hotpink; */
-    /* display: table-column; */
   }

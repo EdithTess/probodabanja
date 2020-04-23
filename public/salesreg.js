@@ -1,7 +1,5 @@
 //Defining function with a name validate
 function validate() {
-  event.preventDefault()
-  
   //Accessing form elements via form attribute
   var ufnameid = document.salesr.first_name;
   var ulnameid = document.salesr.last_name;
@@ -143,7 +141,6 @@ but not both with increaments of 1 */
   }
 }
 function reset() {
-  event.preventDefault()
   alert("working");
   let reset = document.getElementById("reset");
   reset.style.display = "none";

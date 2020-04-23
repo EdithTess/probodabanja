@@ -1,11 +1,12 @@
-body{
+/* body{
     background-color: #4d81f1;
-}
+} */
 .outerdiv{
     padding: 10px;
     border: 1px solid;
-    color: #19202e;
-    background-color: #5f6879;
+    color: #4d81f1;
+    /* background-color: #5f6879; */
+    background: #dfdfe0;
     margin: 1.5rem;
     
 }

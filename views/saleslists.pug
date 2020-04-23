@@ -3,17 +3,16 @@ html
         title List of users
     body
         div.form-row
-            div.col.form-group.col-md-6    
+            div.col.form-group.col-md-9    
                 form.search(action='/saleslist')
                     div.form-row
                         div.col-md-8
-                            input.form-control(name='username' placeholder="Enter your search term ...")
+                            input.form-control(name='first_name' placeholder="Enter your search term ...")
                         div.col-md-4
                             input.btn.btn-dark.btn-block(type="submit")
-            div.col.form-group.col-md-6
+            div.col.form-group.col-md-3
                 form(method="post" action='/logout')
                     button.btn.btn-dark.btn-block(type="submit") Log out
-        form(method="post" action='/register/delete')
         table
             thead(style="background-color: teal;")
                 tr  
@@ -36,8 +35,10 @@ html
                         td(style="padding-right: 80px;")  #{user.companyrole}
                         td(style="padding-right: 80px;")  #{user.wdays}
                         td(style="padding-right: 80px;") 
-                                input(type="hidden", placeholder="", name="username", value=user.username)
+                            form(method="post" action='/register/delete')
+                                input(type="hidden", placeholder="", name="id", value=user._id)
                                 button.btn.btn-dark.btn-block(type="submit") Delete
+
 
 
 

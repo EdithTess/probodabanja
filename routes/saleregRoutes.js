@@ -16,20 +16,17 @@ router.post("/", async (req, res) => {
     try{
     await myData.save();
       console.log("item has been saved to database")
-      
         res.redirect("/salelogin")
-        
-    
       } catch (error) {
         console.log("error message")
         res.status(400).send("unable to save to database");
       }
     });
 
-router.post('/delete',async (req,res)=>{
+    router.post('/delete',async (req,res)=>{
       if(req.session.user){
       try{
-        await User.deleteOne({username:req.body.username})
+        await User.deleteOne({_id:req.body.id})
         res.redirect('back')
       } catch (error){
         res.status(400).send("unable to delete to database");
@@ -37,7 +34,7 @@ router.post('/delete',async (req,res)=>{
       else{
         res.redirect('/saleslist')
       }
-    });    
+    });   
 
 
 

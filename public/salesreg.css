@@ -88,17 +88,20 @@
     color: #4d81f1;
     font-weight: 500;
     font-family: 'Poppins';
-    margin: 0px;
-    background: #282828;
+    margin: 0 ;
+    background: #dfdfe0;
   }
   .signup-content, .form-row, .label-flex, .form-radio-group {
     display: flex;
    }
   
   .container {
-    width: 1400px;
-    margin: 0px;
+    /* width: 1400px; */
+    margin: 0px auto;
     background: #fff;
+    
+    max-width: 800px;
+    padding: 0 15px;
   }
   
   .register-form {
