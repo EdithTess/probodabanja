@@ -7,22 +7,24 @@ html
     link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
     link(rel="stylesheet" href="customerdet.css")
   body(onload="document.customerreg.customerid.focus();")
-    .navbar
-      a(href="/home") Home
-      .dropdown
-        button.dropbtn
-          | View Details
-          i.fa.fa-caret-down
-        .dropdown-content
-          a(href="./customerlists" target="") Customer
-          a(href="./saleslist" target="") Sales Executive
-      .dropdown
-        button.dropbtn
-          | Register
-          i.fa.fa-caret-down
-        .dropdown-content
-          a(href="./customerreg" target="_blank") Customer
-          a(href="./login" target="_blank") Sales Executive
+    .navbar 
+      a(href="/home" style="font-size: 35px; color: #dfdfe0;") &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BBB***BB-banja
+      div(style="float: right; ")
+        a(href="/home") Home
+        .dropdown
+          button.dropbtn
+            | View Details
+            i.fa.fa-caret-down
+          .dropdown-content
+            a(href="./customerlists" target="") Customer
+            a(href="./saleslist" target="") Sales Executive
+        .dropdown
+          button.dropbtn
+            | Register
+            i.fa.fa-caret-down
+          .dropdown-content
+            a(href="./customerreg" target="") Customer
+            a(href="./login" target="") Sales Executive
     h1(style="color:#4d81f1;")
       center  CUSTOMER REGISTRATION FORM 2020
     .container
@@ -158,4 +160,4 @@ html
                   input#submit.submit(type="submit" value="Submit" name="submit" onclick="validate()")
                   input#cancel.submit(type="reset" value="Cancel" name="reset" onclick="reset();")
     script(src="/customerdet.js")
-    span#foo(style="font-size: large; float: right; ") bodaboda banja &copy2020
+    span#foo(style="font-size: 25px; float: right; ") bodaboda banja &copy2020

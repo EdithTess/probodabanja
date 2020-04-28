@@ -5,6 +5,7 @@
   overflow: hidden;
   background-color: #4d81f1;
   font-family: Arial;
+  height: 55px;
 }
 
 /* Links inside the navbar */
@@ -72,7 +73,7 @@
 
 
 body {
-  font-size: 14px;
+  font-size: 25px;
   color: #4d81f1;
   font-weight: 500;
   font-family: 'Poppins';
@@ -82,16 +83,23 @@ body {
 
 .outerdiv{
     margin: 0px auto;
-    max-width: 900px;
+    max-width: 1100px;
     padding: 0 15px;
 }
 
-.row{
-    /* width: 700px; */
-    margin: 1rem;
-    height: auto;
-}
-.col{
-    margin: 1rem;
-    color: #4d81f1;
+  .row {
+    display: flex;
+  }
+  
+  .col1 {
+    background-color: #dfdfe0;
+    width: 500px;
+    padding: 20px 20px;
+  }
+
+  .col2 {
+    margin-left:15px ;
+    background-color: #dfdfe0;
+    width: 500px;
+    padding: 20px 20px;
   }

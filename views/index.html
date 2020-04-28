@@ -1,233 +1,61 @@
 <!DOCTYPE html>
-<html>
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Customer registration form</title>
-  <link rel="stylesheet" href="/customerdet.css">
-  <link rel="stylesheet" href="/CSS/bootstrap.css">
-  
-</head>
-<body onload="document.customerreg.customerid.focus();">
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css" />
+    <link rel="stylesheet" href="admin.css" />
+    <title>Boda Banja</title>
+  </head>
 
+  <body>
     <div class="navbar">
-        <a href="#home">Home</a>
-        <a href="#news">View Details</a>
+      <a href="/home" style="font-size: 35px; color: #dfdfe0;">
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BBB***BB-banja
+      </a>
+      <div style="float: right;">
+        <a href="/home">Home</a>
         <div class="dropdown">
-          <button class="dropbtn">Register
-            <i class="fa fa-caret-down"></i>
+          <button class="dropbtn">
+            View Details<i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-content">
-            <a href="./customerdet.html">Customer</a>
-            <a href="./registerl.html">Sales Executive</a>
+            <a href="./customerlists" target="">Customer</a
+            ><a href="./saleslist" target="">Sales Executive</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="dropbtn">
+            Register<i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-content">
+            <a href="./customerreg" target="">Customer</a
+            ><a href="./login" target="">Sales Executive</a>
           </div>
         </div>
       </div>
-    <h1 style="color:#4d81f1;"><center> CUSTOMER REGISTRATION FORM 2020</center></h1>
-        <div class="container">
-            <div class="signup-content">
-                <div class="signup-form">
-                    <form method="POST" name="customerreg" action="/customerreg" onSubmit="validate();">
-                        <div class="form-row">
-                            <div class="form-group">
-                                <div class="photo"> 
-                                    <label for="photo" class="required">Attach Photo</label>
-                                    ​<input type="file" name="photo" id="photo" />
-                                </div>
-                                <br>
-                                <br>
-                                <div class="form-input">
-                                    <label for="customerid" class="required">Customer ID</label>
-                                    <input type="text" name="customerid" id="customerid" />
-                                </div>
-                                <br>
-                                <div class="form-input">
-                                    <label for="currentdate" class="required">Current Date</label>
-                                    <input type="date" name="currentdate"id="currentdate" />
-                                </div>
-                            </div>
-                            <div class="form-group">
-                                    <div class="form-input">
-                                        <label for="first_name" class="required">First name</label>
-                                        <input type="text" name="first_name" id="first_name" />
-                                    </div>
-                                    <div class="form-input">
-                                        <label for="last_name" class="required">Last name</label>
-                                        <input type="text" name="last_name" id="last_name" />
-                                    </div>
-                                
-                                    <div class="form-input">
-                                        <label for="email" class="required">Email</label>
-                                        <input type="text" name="email" id="email" />
-                                    </div>
-                                    <div class="form-input">
-                                        <label for="phone_number" class="required">Phone number</label>
-                                        <input type="text" name="phone_number" id="phone_number" />
-                                    </div>
-                                    <div class="form-input">
-                                    <label for="nin" class="required">National ID</label>
-                                    <input type="text" name="nin" id="nin" />
-                                    </div>
-                                    <div class="form-input">
-                                    <label for="nationality" class="required">Nationality</label>
-                                    <input type="text" name="nationality" id="nationality" />
-                                    </div>
-                            </div>
-
-                            <div class="form-group">
-                                <div class="form-input">
-                                    <label for="cdob" class="required">Date of birth</label>
-                                    <input type="date" name="cdob" id="cdob" value="">
-                            </div>
-                            <br>
-                            <div class="form-input">
-                                <label for="age" class="required">AGE</label>  
-                                <input type="text" name="age" id="age" />
-                            </div>
-                            <br>
-                            <div class="form-radio">
-                                <div class="label-flex">
-                                    <label for="status">Marital status</label>
-                                    
-                                </div>
-                                <div class="form-radio-group">            
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="status" id="single" value="single">
-                                        <label for="single">Single</label>
-                                        <span class="check"></span>
-                                    </div>
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="status" id="married" value="married">
-                                        <label for="married">Married</label>
-                                        <span class="check"></span>
-                                    </div>
-                                 </div>
-                                </div>
-                               
-                                <div class="form-input">
-                                    
-                                    <label for="village" class="required">Village/Parish</label>
-                                    <input type="text" name="village" id="village" />
-                                </div>
-                               
-                                <div class="form-input">
-                                    
-                                    <label for="division" class="required">Division/District</label>
-                                    <input type="text" name="division" id="division" />
-                                </div>
-                               
-                                <div class="form-radio-group">      
-                                    <label for="first_name" class="required">Permit</label>      
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="Permit" id="yes" value="yes">
-                                        <label for="yes">Yes</label>
-                                        <span class="check"></span>
-                                    </div>
-                                    <div class="form-radio-item">
-                                        <input type="radio" name="status" id="no" value="no">
-                                        <label for="no">No</label>
-                                        <span class="check"></span>
-                                    </div>
-                                
-                                </div>
-                             
-                            </div>
-                        </div>
-                        <hr>
-                        <div class="form-row">
-                            <div class="form-group">
-                                    <label for="vehicle" class="required">Kind of Vehicle</label>
-                                    <div class="select-list" >
-                                        <select name="vehicle" id="lop" >
-                                            <option value="bodaboda" >Boda Boda</option>
-                                            <option value="tuktuk">Tuk Tuk</option>
-                                            <option value="tricycle">Tricycle</option>
-                                        </select>
-                                    </div>
-                                        <label for="make" class="required">Type/Make</label>
-                                        <input type="text" name="make" id="make" />
-                                        <br>
-                                        <label for="numberplate" class="required">Number Plate</label>
-                                        <input type="text" name="numberplate" id="numberplate" />
-                                    <div class="form-input">
-                                        <label for="stagename" class="required">Stage name</label>
-                                        <input type="text" name="stagename" id="stagename" />
-                                        <br>
-                                        <label for="stagejoin" class="required">Stage Join Date</label>
-                                        <input type="date" name="stagejoin" id="stagejoin" />
-                                        <br>
-                                        <label for="stagechair" class="required">Stage Chairman</label>
-                                        <input type="text" name="stagechair" id="stagechair" />
-                                    </div>
-                            </div>
-                            <div class="form-group">
-                                
-                                <label for="loantype" class="required">Loan type</label>
-                                <select name="loantype" id="lop">
-                                    <option value="paydayloan">Payday Loan</option>
-                                    <option value="monthlyloan">Monthly Loan</option>
-                                    <option value="yearlyloan">Yearly Loan</option>
-                                </select>
-                                <label for="downpayment" class="required">Down Payment</label>
-                                <div class="select-list" >
-                                    <select name="vehicle" id="lop" >
-                                        <option value="850000" >Boda Boda</option>
-                                        <option value="950000">Tuk Tuk</option>
-                                        <option value="850000">Tricycle</option>
-                                    </select>
-                                </div>
-                                <fieldset>
-                                        <label style="text-transform: none;">LC1</label>
-                                                    <legend ><label class="required">LC Stamps</label></legend>
-                                                    <div  style="border-color: #329e5e;">
-                                                    <input type="file" name="lc1" id="lc1" value=""/>
-                                                    </div>
-                                                    <legend >LC3</legend>
-                                                    <div style="border-color: #329e5e; ">
-                                                    <input type="file" name="lc3" id="lc3" value="" />
-                                                    </div>
-                                </fieldset>
-                                
-                                <fieldset>
-                                        <label style="text-transform: none;">Attachments</label>
-                                                                <legend  ><label class="required" >Required Documents</label></legend>
-                                                                <div  style="border-color: #329e5e;">
-                                                                <input type="file" name="reqdoc" id="reqdoc" value="" />
-                                                                <br>
-                                    </fieldset>
-                            </div>
-                        </div>
-                        <hr>
-                        <h2 style="color:#4d81f1;">REFEREE SECTION </h2>
-                                <div class="form-input">
-                                    <label for="name" class="required">Name</label>
-                                    <input type="text" name="name" id="name" value=""/>
-                                </div>
-                            
-                                <div class="form-input">
-                                    <label for="phone_number" class="required">Phone number</label>
-                                    <input type="text" name="phone_number" id="phone_number" value=""/>
-                                </div>
-                                <div class="form-input">
-                                    <label for="occupation" class="required">Occupation</label>
-                                    <input type="text" name="occupation" id="occupation" value=""/>
-                                </div>
-                                <div class="form-input">
-                                    <label for="dob" class="required" >Date of birth</label>
-                                    <input type="date" name="dob" id="dob" value=""/>
-                                </div>
-                                <br>
-                        <div class="form-submit">
-                            <input type="submit" value="Submit" class="submit" id="submit" name="submit" onclick="validate()" />
-                            <input type="reset" value="Cancel" class="submit" id="cancel" name="reset" onclick="reset();"/>
-                        </div>
-                    </form>
-                </div>
-            </div>
+    </div>
+    <div class="outerdiv">
+      <div class="row">
+        <div class="col1">
+          <p style="color: #4d81f1; text-align: centre; font-size: 55px;">
+            Boda Boda Banja &nbsp;&nbsp;&nbsp;&nbsp;Uganda
+          </p>
+          <p style="color: #4d81f1;">
+            Private company that offers bodabodas, tuktuks, tricycles among
+            others on credit to qualified Ugandans.
+          </p>
+          <br />
+          <p style="font-size: 50px;">Own your own Boda &#128522;</p>
         </div>
-        <script src="/customerdet.js"></script>
-        <span style="font-size: large; float: right; " id="foo" >bodaboda banja &copy2020</span>
-</body>
+        <div class="col2">
+          <img class="d-block w-100" src="Images/own.JPG" alt="" width="600" height="250"/>
+          <img src="./Images/honda.jpg" alt="" width="600" height="250" />
+          <br>
+          <br>
+          <span id="foo" style="font-size: 25px; color: #4d81f1; float: right;">bodaboda banja &copy2020</span>
+        </div>
+      </div>
+    </div>
+  </body>
 </html>
-
-

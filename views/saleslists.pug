@@ -7,16 +7,16 @@ html
                 form.search(action='/saleslist')
                     div.form-row
                         div.col-md-8
-                            input.form-control(name='first_name' placeholder="Enter your search term ...")
+                            input.form-control(name='first_name' placeholder="Enter your first name ...")
                         div.col-md-4
                             input.btn.btn-dark.btn-block(type="submit")
             div.col.form-group.col-md-3
                 form(method="post" action='/logout')
-                    button.btn.btn-dark.btn-block(type="submit") Log out
+                    button.btn.btn-dark.btn-block(type="submit") Log out  
         table
             thead(style="background-color: teal;")
                 tr  
-                    th(style="padding-right: 80px; color: white") First name
+                    th(style="padding-right: 80px; color: white") First name 
                     th(style="padding-right: 80px; color: white") Last name
                     th(style="padding-right: 80px; color: white") Username
                     th(style="padding-right: 50px; color: white") Sales Person ID

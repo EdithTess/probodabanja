@@ -81,12 +81,14 @@
   margin: 1.5rem;
 }
 body {
-  font-size: 14px;
-  color: #4d81f1;
-  font-weight: 500;
+  font-size: 23px;
+  color: hsl(221, 85%, 62%);
+  font-weight: 700;
   font-family: "Poppins";
   margin: 0;
   background: #dfdfe0;
+  justify-content: center;
+  
 }
 .outerdiv {
   padding-top: 15px;
@@ -97,21 +99,22 @@ body {
   max-height: 800px;
 }
 #btn_sp {
-  background-color: #ebd4d4;
+  background-color: #4d81f1;
   color: #192019;
   border: #3d6e22;
   font-weight: bold;
   margin-top: 1rem;
   width: 98%;
   height: 2rem;
+  border-radius: 1rem;
 }
 #btn_signup {
-  background-color: #ebd4d4;
+  background-color: #4d81f1;
   color: #192019;
   border: #3d6e22;
   font-weight: bold;
   margin-top: 1rem;
   width: 100%;
-  border-radius: 0.5rem;
+  border-radius: 0.8rem;
   height: 2rem;
 }

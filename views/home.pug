@@ -1,68 +1,43 @@
 doctype html
 html(lang="en")
   head
-    title Home Page
-    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.css")
+    meta(charset="UTF-8")
+    meta(name="viewport" content="width=device-width, initial-scale=1.0")
+    link(rel="stylesheet" href="../public/bootstrap/css/bootstrap.min.css")
     link(rel="stylesheet" href="admin.css")
-    link(rel="stylesheet" href="../public/bootstrap/css/style.css")
-    link(rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous")
-    link(rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css")
-    script(src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js")
-    script(src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js")
+    title Boda Banja
   body
-    .navbar
-      a(href="/home") Home
-      .dropdown
-        button.dropbtn
-          | View Details
-          a(href="./customerlists" target="") Customer
-          a(href="./saleslist" target="") Sales Executive
-      .dropdown
-        button.dropbtn
-          | Register 
-          a(href="./customerreg" target="_blank") Customer
-          a(href="./login" target="_blank") Sales Executive
-    .container 
+    .navbar 
+      a(href="/home" style="font-size: 35px; color: #dfdfe0;") &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;BBB***BB-banja
+      div(style="float: right; ")
+        a(href="/home") Home
+        .dropdown
+          button.dropbtn
+            | View Details
+            i.fa.fa-caret-down
+          .dropdown-content
+            a(href="./customerlists" target="") Customer
+            a(href="./saleslist" target="") Sales Executive
+        .dropdown
+          button.dropbtn
+            | Register
+            i.fa.fa-caret-down
+          .dropdown-content
+            a(href="./customerreg" target="") Customer
+            a(href="./login" target="") Sales Executive
+    .outerdiv 
       .row
-        .col-md-4.left
-          br
-          img.d-block.w-100(src="Images/bb-bbb.JPG", alt=align="centre" width="200" height="100") 
-          h1.pd(style="color:#4d81f1;  text-align: centre;")
-            | Boda Boda Banja
-            br
-            |  &nbsp;&nbsp;&nbsp;&nbsp;Uganda
-        .col-md-8.right
-          br
-          .container.mt-3
-            #myCarousel.carousel.slide(data-ride="carousel")
-              // Indicators
-              ul.carousel-indicators
-                li.active(data-target="#myCarousel" data-slide-to="0")
-                li(data-target="#myCarousel" data-slide-to="1")
-                li(data-target="#myCarousel" data-slide-to="2")
-              // The slideshow
-              .carousel-inner
-                .carousel-item.active
-                  img(src="./Images/honda.jpg" alt="" width="1100" height="400")
-                .carousel-item
-                  img(src="./Images/bodaum.jpg" alt="" width="1100" height="400")
-                .carousel-item
-                  img(src="./Images/unnamed.jpg" alt="" width="1100" height="400")
-            // Left and right controls
-            a.carousel-control-prev(href="#myCarousel" data-slide="prev")
-              span.carousel-control-prev-icon
-            a.carousel-control-next(href="#myCarousel" data-slide="next")
-              span.carousel-control-next-icon
+        .col1    
+          p(style="color:#4d81f1; font-size: 55px;")
+            | Boda Boda Banja &nbsp;&nbsp;&nbsp;&nbsp;Uganda
           p(style="color:#4d81f1;")
-            | BBB, is a private company that offers bodabodas,tuktuks,tricycles among others on credit to qualified Ugandans.
-      
-    span#foo(style="font-size: large; color:#4d81f1; float: right; ") bodaboda banja &copy2020
-
-    script(src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous")
-    script(src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1" crossorigin="anonymous")
-    script(src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous")
-
+            | We are a private company that offers bodabodas, tuktuks, tricycles among others on credit to qualified Ugandans.
+          p(style="font-size:50px") Own your own Boda &#128522;
+        .col2     
+          img.d-block.w-100(src="Images/own.JPG", alt="" width="600" height="250") 
+          img(src="./Images/honda.jpg" alt="" width="600" height="250")
+          brbr
+          span#foo(style="font-size: 25px; color:#4d81f1; float: right; ") bodaboda banja &copy2020
 
 
 
